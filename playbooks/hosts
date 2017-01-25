@@ -1,0 +1,28 @@
+[servers]
+eve ansible_user=root
+centos-1 ansible_user=root
+
+[ios]
+iosv-1
+
+[ios:vars]
+ansible_user=admin
+ansible_password=admin
+
+[sros]
+sros-1
+
+[sros:vars]
+ansible_user=admin
+ansible_ssh_pass=admin
+
+[arista]
+veos-1
+
+[arista:vars]
+ansible_user=admin
+ansible_ssh_pass=admin
+
+[ios_alikes:children]
+ios
+arista

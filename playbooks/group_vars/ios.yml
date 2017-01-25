@@ -1,0 +1,13 @@
+---
+snmp_community: cisco
+snmp_contact: admin@lab.local
+snmp_host: 192.168.254.3
+syslog_server: 192.168.254.3
+snmp_server: 192.168.254.3
+ansible_device_os:	ios
+cli:
+  username: "{{ansible_user}}"
+  password: "{{ansible_password}}"
+  host:     "{{inventory_hostname}}"
+  transport: cli
+  

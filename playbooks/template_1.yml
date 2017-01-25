@@ -1,0 +1,10 @@
+---
+- hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+    - template: src=templates/{{ansible_device_os}}/common.j2 dest=configs/{{inventory_hostname}}.cfg
+      name: create common configlets
+    - debug: var=vars
+    
+

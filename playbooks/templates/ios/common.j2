@@ -1,0 +1,7 @@
+logging host {{ syslog_server }}
+!
+snmp-server community {{ snmp_community }} RO
+snmp-server location {{ location }}
+snmp-server host {{ snmp_server }}
+snmp-server chassis-id
+snmp-server contact admin@lab.local

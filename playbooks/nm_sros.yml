@@ -1,0 +1,14 @@
+---
+- hosts: sros
+  gather_facts: no
+  connection: local
+  tasks:
+  - name: run show version on ios nodes
+    sros_command:
+      commands: show version
+      provider: "{{cli}}"
+    register: output
+  - debug: var=output.stdout_lines
+
+
+  
